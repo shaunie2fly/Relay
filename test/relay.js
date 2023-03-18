@@ -63,7 +63,7 @@ export const subscribe = (channel, loggerDomElement = null) => {
  * Publish a message to a channel on the Relay service
  * @param {string} a string or json-string to publish
  */
-export function publish(payload = '') {
+export function publish( payload = '') {
    fetch(SERVICE_URL + "/", {
       method: "POST",
       body: JSON.stringify({
