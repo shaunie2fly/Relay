@@ -1,4 +1,5 @@
-# Relay - A simple Deno Pub/Sub service   
+# Relay
+## A simple Deno Pub/Sub service   
  
 
 Relay is an asynchronous peer-to-peer communication microservice.    
