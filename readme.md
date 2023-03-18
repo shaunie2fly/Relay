@@ -18,8 +18,7 @@ received by all `subscribers` to that channel.
 
 # Subscribe 
 ## server sent events registration
-To subscribe to Relay messages, we instantiate a new EventSource with a channel name   
-as follows:
+To subscribe to Relay messages, we instantiate a new EventSource with a channel name as follows:
 ```ts 
 // port 9099 is just a convention I use for Relay
 const relayURL = `https://localhost:9099/subscribe/?channel="LOG"`;
