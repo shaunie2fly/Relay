@@ -16,7 +16,8 @@ received by all `subscribers` to that channel.
   - Streams all published messages to all subscribers using Server Sent Events.
   - Leverages Deno-BroadcastChannel to bridge deploy isolates and regions.
 
-# Subscribe (server sent events registration)
+# Subscribe 
+## server sent events registration
 To subscribe to Relay messages, we instantiate a new EventSource with a channel name   
 as follows:
 ```ts 
