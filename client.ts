@@ -1,5 +1,11 @@
 /// <reference lib="dom" />
 
+/*================================================
+NOTE: This file is used in applications that 
+      use esbuild to bundle deno client side code. 
+//===============================================*/
+
+
 const SERVICE_URL = `http://localhost:9099`;
 const DEBUG = true;
 
