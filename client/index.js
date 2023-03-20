@@ -1,7 +1,8 @@
 
-import * as Relay from './relay.js'
+import { publish, subscribe } from './client.js'
 
 let id = 0
+let channel = 'LOG'
 
 // Add an event listener for our 'Send' button.
 // on click, will publish a message to the 'LOG' channel of the Relay service
@@ -13,8 +14,8 @@ document.getElementById('sendbtn').addEventListener("click", (e) => {
          age: 74 
       } 
    }
-   Relay.publish(JSON.stringify(payLoad))
+   publish(channel, JSON.stringify(payLoad))
 })
 
 // Subscribe to Relay messages from a channel named 'LOG' 
-Relay.subscribe("LOG", document.getElementById('logger'))
+subscribe(channel, document.getElementById('logger'))
