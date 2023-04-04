@@ -14,7 +14,7 @@ If a payload does not contain a channel property, the service will default to a 
 1. The app calls the relay-clients publish function with the channelName and a payload:
 ```ts
    const payLoad = { 
-      topic: 'user', 
+      channel: 'LOG', 
       user:{ 
          name: 'Me', 
          age: 74 

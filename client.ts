@@ -24,9 +24,9 @@ let channelName: string
  * @argument {string} channel - the name of a channel to subscribe to
  * @argument {HTMLElement} loggerDomElement - a screen element to log to  
  */ 
-export const subscribe = (channel: string, loggerDomElement:HTMLElement | null = null) => {
-   channelName = channel
-   // any local UI log element
+export const subscribe = (channelName: string, loggerDomElement: HTMLElement | null = null) => {
+   
+   // any local GUI log element
    loggingGUI = loggerDomElement
    
    // this is our Relay client; we'll call her `eventSource`
@@ -71,7 +71,7 @@ export const subscribe = (channel: string, loggerDomElement:HTMLElement | null =
  * @param {string}  payload - string or json-string to publish
  * @param {string}  chan - channel name
  */
-export function publish( payload= '', chan = channelName, ) {
+export function publish( payload = '', chan = channelName, ) {
    fetch(SERVICE_URL + "/", {
       method: "POST",
       body: JSON.stringify({

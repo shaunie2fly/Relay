@@ -3,58 +3,8 @@
    "tasks": [
       {
          "label": "Deno Run Service",
-         "type": "deno",
-         "command": "run",
-         "args": [
-            "-A",
-            "--unstable",
-            "service.ts"
-         ],
-         "options": {
-            "cwd": "./",
-            "env": {
-               "DEBUG": "true",
-               "PORT": "9099"
-            }
-         },
-         "problemMatcher": [
-            "$deno"
-         ]
-      },
-      {
-         "label": "Run Test App",
          "type": "shell",
-         "command": "serve",
-         "options": {
-            "cwd": "./client"
-         }
-      },
-      {
-         "label": "TEST RELAY",
-         "dependsOn": [
-            "Deno Run Service",
-            "Run Test App"
-         ],
-         "problemMatcher": [
-            "$deno"
-         ]
-      },
-      {
-         "label": "Deno Run Service",
-         "type": "deno",
-         "command": "run",
-         "args": [
-            "-A",
-            "--unstable",
-            "service.ts"
-         ],
-         "options": {
-            "cwd": "./",
-            "env": {
-               "DEBUG": "false",
-               "PORT": "9099"
-            }
-         },
+         "command": "relay",
          "problemMatcher": [
             "$deno"
          ]
